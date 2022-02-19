@@ -1,6 +1,10 @@
-import firebase from "firebase/compat";
+import firebase from "firebase/app";
 import { createContext, ReactNode, useEffect, useState } from "react";
-import { auth } from "../services/firebase";
+import {
+  auth,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "../services/firebase";
 
 type User = {
   id: string;
@@ -44,9 +48,9 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
   }, []);
 
   async function signInWithGoogle() {
-    const provider = new firebase.auth.GoogleAuthProvider();
+    const provider = new GoogleAuthProvider();
 
-    const result = await auth.signInWithPopup(provider);
+    const result = await signInWithPopup(auth, provider);
 
     if (result.user) {
       const { displayName, photoURL, uid } = result.user;
