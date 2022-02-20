@@ -13,6 +13,15 @@
       > img {
         max-height: 45px;
       }
+
+      > div {
+        display: flex;
+        gap: 16px;
+
+        button {
+          height: 40px;
+        }
+      }
     }
   }
 
@@ -39,6 +48,29 @@
         color: #fff;
         font-weight: 500;
         font-size: 14px;
+      }
+    }
+
+    .question-list {
+      margin-top: 32px;
+    }
+
+    .empty-container {
+      display: flex;
+      flex-direction: column;
+      padding: 50px;
+
+      img {
+        width: 30%;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+      }
+      .no-question {
+        margin-top: 50px;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+        text-align: center;
       }
     }
 
