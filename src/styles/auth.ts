@@ -1,12 +1,13 @@
-#page-auth {
+import styled from "styled-components";
+
+export const Container = styled.div`
   display: flex;
-  align-items: stretch;
   height: 100vh;
 
   aside {
     flex: 7;
-    background-color: #835afd;
-    color: #fff;
+    background: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.text};
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,14 +27,24 @@
       font-size: 24px;
       line-height: 32px;
       margin-top: 16px;
-      color: #f8f8f8;
+      color: ${(props) => props.theme.colors.text};
     }
+  }
+
+  .header-content {
+    display: inline-block;
+    margin-bottom: 10rem;
+    margin-left: 50rem;
+    justify-content: center;
+    align-items: center;
   }
 
   main {
     flex: 8;
     padding: 0 32px;
+    margin-bottom: 20rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
@@ -61,8 +72,9 @@
         height: 50px;
         border-radius: 8px;
         padding: 0 16px;
-        background-color: #fff;
-        border: 1px solid #a8a8b3;
+        background-color: ${(props) => props.theme.colors.background};
+        border: 1px solid ${(props) => props.theme.colors.primary};
+        color: ${(props) => props.theme.colors.text};
       }
 
       button {
@@ -77,10 +89,10 @@
 
     p {
       font-size: 14px;
-      color: #737380;
+      color: ${(props) => props.theme.colors.text};
       margin-top: 16px;
       a {
-        color: #e559f9;
+        color: ${(props) => props.theme.colors.primary};
       }
     }
   }
@@ -131,4 +143,4 @@
       margin-left: 16px;
     }
   }
-}
+`;

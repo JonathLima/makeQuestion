@@ -8,9 +8,14 @@ import illustrationImg from "../assets/images/illustration.svg";
 import logoImg from "../assets/images/logo.svg";
 import googleIconImg from "../assets/images/google-icon.svg";
 
-import "../styles/auth.scss";
+import { Container } from "../styles/auth";
+import { SwitchTheme } from "../components/SwitchTheme";
 
-export function Home() {
+type Props = {
+  toggleTheme(): void;
+};
+
+export function Home({ toggleTheme }: Props) {
   const navigate = useNavigate();
   const { user, signInWithGoogle } = useAuth();
   const [roomCode, setRoomCode] = useState("");
@@ -37,11 +42,16 @@ export function Home() {
       return;
     }
 
+    if (roomRef.val().closedAt) {
+      alert("room already closed");
+      return;
+    }
+
     navigate(`/rooms/${roomCode}`);
   }
 
   return (
-    <div id="page-auth">
+    <Container>
       <aside>
         <img
           src={illustrationImg}
@@ -50,7 +60,11 @@ export function Home() {
         <strong>Crie salas de Q&amp;A ao vivo</strong>
         <p>Tire as dúvidas da sua audiência em tempo real</p>
       </aside>
+
       <main>
+        <div className="header-content">
+          <SwitchTheme onClick={toggleTheme} />
+        </div>
         <div className="main-content">
           <img src={logoImg} alt="Letmeask" />
           <button onClick={handleCreateRoom} className="create-room">
@@ -70,6 +84,6 @@ export function Home() {
           </form>
         </div>
       </main>
-    </div>
+    </Container>
   );
 }

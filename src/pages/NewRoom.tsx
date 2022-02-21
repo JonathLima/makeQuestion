@@ -7,7 +7,7 @@ import { useAuth } from "../hooks/useAuth";
 import illustrationImg from "../assets/images/illustration.svg";
 import logoImg from "../assets/images/logo.svg";
 
-import "../styles/auth.scss";
+import { Container } from "../styles/auth";
 
 export function NewRoom() {
   const { user } = useAuth();
@@ -33,7 +33,7 @@ export function NewRoom() {
   }
 
   return (
-    <div id="page-auth">
+    <Container>
       <aside>
         <img
           src={illustrationImg}
@@ -64,6 +64,6 @@ export function NewRoom() {
           </p>
         </div>
       </main>
-    </div>
+    </Container>
   );
 }

@@ -1,12 +1,17 @@
+import { createGlobalStyle } from "styled-components";
+
+export default createGlobalStyle`
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 body {
-  background-color: #f8f8f8;
-  color: #29292e;
+ 
+  background: ${(props) => props.theme.colors.background};
+  color: ${(props) => props.theme.colors.text};
 }
 
 body,
@@ -14,6 +19,7 @@ input,
 button,
 textarea {
   font: 400 16px "Roboto", sans-serif;
+ 
 }
 
 code {
@@ -22,12 +28,13 @@ code {
 }
 
 .react-modal-overlay {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
   position: fixed;
   bottom: 0;
   right: 0;
   left: 0;
   top: 0;
+  padding: 0 15px 0 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,24 +44,37 @@ code {
   max-width: 575px;
   height: 450px;
   background: #fff;
-  padding: 3rem;
+  padding: 40px;
+
   position: relative;
   border-radius: 8px;
 
-  h2 {
-    font-family: "Poppins", sans-serif;
-    font-size: 28px;
-    color: #29292e;
+  .modal-delete {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    text-align: center;
+    align-items: center;
+
+    svg {
+      max-width: 80px;
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      font-family: "Poppins", sans-serif;
+      font-size: 23px;
+      color: #29292e;
+      justify-content: center;
+      text-align: center;
+    }
   }
 
   .modal-button {
     display: flex;
-    padding: 10px;
+    padding: 15px;
     align-items: center;
     justify-content: space-between;
-    margin-top: 200px;
+    margin-top: 100px;
     flex-direction: row;
     gap: 80px;
 
@@ -63,9 +83,9 @@ code {
       height: 50px;
       border-radius: 8px;
       font-weight: 600;
-
+      font-size: 20px;
       text-align: center;
-      background-color: #835afd;
+      background-color: #f11621;
       color: #fff;
       padding: 0 32px;
 
@@ -78,8 +98,9 @@ code {
       }
 
       &.btn-close {
-        background-color: #f11621;
+        background-color: #835afd;
       }
     }
   }
 }
+`;

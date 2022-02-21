@@ -1,8 +1,10 @@
-.button {
+import styled from "styled-components";
+
+export const BtnComponent = styled.button`
   height: 50px;
   border-radius: 8px;
   font-weight: 600;
-  background-color: #835afd;
+  background-color: ${(props) => props.theme.colors.primary};
   color: #fff;
   padding: 0 32px;
 
@@ -31,4 +33,4 @@
     opacity: 0.6;
     cursor: not-allowed;
   }
-}
+`;
