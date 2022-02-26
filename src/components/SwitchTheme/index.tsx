@@ -21,9 +21,9 @@ export function SwitchTheme(props: ButtonProps) {
       <a onClick={handleSwitchImage}>
         <BtnSwitch {...props}>
           {image ? (
-            <FiMoon size={35} className="btn-moon" />
+            <BsSun size={35} className="btn-moon" />
           ) : (
-            <BsSun size={35} className="btn-sun" />
+            <FiMoon size={35} className="btn-sun" />
           )}
         </BtnSwitch>
       </a>

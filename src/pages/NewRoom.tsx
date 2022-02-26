@@ -8,8 +8,13 @@ import illustrationImg from "../assets/images/illustration.svg";
 import logoImg from "../assets/images/logo.svg";
 
 import { Container } from "../styles/auth";
+import { SwitchTheme } from "../components/SwitchTheme";
 
-export function NewRoom() {
+type Props = {
+  toggleTheme(): void;
+};
+
+export function NewRoom({ toggleTheme }: Props) {
   const { user } = useAuth();
   const navigate = useNavigate();
 
@@ -47,6 +52,9 @@ export function NewRoom() {
       <main>
         <div className="main-content">
           <img src={logoImg} alt="Letmeask" />
+          <div className="header-content">
+            <SwitchTheme onClick={toggleTheme} />
+          </div>
 
           <h2>Crie uma nova sala</h2>
 

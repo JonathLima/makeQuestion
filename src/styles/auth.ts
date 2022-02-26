@@ -42,7 +42,7 @@ export const Container = styled.div`
   main {
     flex: 8;
     padding: 0 32px;
-    margin-bottom: 20rem;
+    margin-bottom: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -141,6 +141,31 @@ export const Container = styled.div`
       height: 1px;
       background-color: #a8a8b3;
       margin-left: 16px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    flex: 0;
+    flex-direction: column;
+    overflow-x: hidden;
+
+    aside {
+      background: ${(props) => props.theme.colors.primary};
+      flex: 0;
+      padding: 50px 20px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      img {
+        width: 200px;
+        margin-bottom: 1rem;
+      }
+    }
+
+    main {
+      margin-bottom: 1rem;
+      position: relative;
+      bottom: 5rem;
     }
   }
 `;

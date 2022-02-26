@@ -21,8 +21,8 @@ export const BtnComponent = styled.button`
 
   &.outlined {
     background-color: #fff;
-    border: 1px solid #835afd;
-    color: #835afd;
+    border: 1px solid #36acae;
+    color: #36acae;
   }
 
   &:not(:disabled):hover {

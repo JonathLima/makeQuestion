@@ -26,7 +26,10 @@ function App() {
           <GlobalStyle />
           <Routes>
             <Route path="/" element={<Home toggleTheme={toggleTheme} />} />
-            <Route path="/rooms/new" element={<NewRoom />} />
+            <Route
+              path="/rooms/new"
+              element={<NewRoom toggleTheme={toggleTheme} />}
+            />
             <Route path="/rooms/:id" element={<Room />} />
             <Route path="/admin/rooms/:id" element={<AdminRoom />} />
           </Routes>

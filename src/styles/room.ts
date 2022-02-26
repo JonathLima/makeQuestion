@@ -44,7 +44,7 @@ export const Container = styled.div`
 
       span {
         margin-left: 16px;
-        background: #e559f9;
+        background: #36acae;
         border-radius: 9999px;
         padding: 8px 16px;
         color: #fff;
@@ -79,7 +79,7 @@ export const Container = styled.div`
     form {
       textarea {
         width: 100%;
-        outline-color: #e559f9;
+        outline-color: #36acae;
         border: 0;
         padding: 16px;
         background: #fefefe;
@@ -119,7 +119,7 @@ export const Container = styled.div`
           button {
             background: transparent;
             border: 0;
-            color: #835afd;
+            color: #36acae;
             text-decoration: underline;
             font-size: 14px;
             font-weight: 500;
