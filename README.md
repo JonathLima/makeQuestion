@@ -1,9 +1,6 @@
-# <div align="center" >
+# <div align="center"><img  width="200" src="https://i.imgur.com/yrTSoDh.png" /></div>
 
-  <img src="#" />
-  </div>
-
-#### <div align="center"> Website: </br> `NOT AVAILABLE`</div>
+#### <div align="center"> Website: </br>https://letmeask-5d4c9.web.app/</div>
 
 <p align="center">
 
@@ -33,7 +30,7 @@
 
 ## 🎨 Layout
 
-<img src="#">
+<img src="https://i.imgur.com/5dzQxhc.png">
 
 ## 🚀 About Project
 
@@ -44,17 +41,16 @@ This project was done by applying knowledge in react to create a Q&A system.
 - [Typescript][typescript]
 - [ReactJs][reactjs]
 - [Scss][axios]
-- [Styled Components][styled]
+- [Styled Components][components]
 - [Firebase][firebase]
 
 ## 📋 Implementations
 
-<!-- - [✔️] Estruturar o site.
-- [✔️] Consumir [API](https://pokeapi.co/).
-- [✔️] Carregar os primeiros 20 pokémons assim que abrir o site utilizando useEffect.
-- [✔️] Realizar busca do Pokemon sem utilizar botão (Real-time Search).
-- [❌] Implementar paginação.
-- [❌] Implementar testes “end-to-end” para o site. -->
+- [✔️] Structure website.
+- [✔️] Sign in to google account.
+- [✔️] User page to ask questions.
+- [✔️] Admin page for answering questions
+- [✔️] Deploying in firebase.
 
 ## 🚀 How to run
 
@@ -95,13 +91,14 @@ $ yarn start
 
 This project is under MIT license. See [License][license] to learn more.
 
-Made with ❤️ by Jonathan Silva 👋🏽 [Entre em contato!](https://www.linkedin.com/in/jonathsilva)
+Made with ❤️ by Jonathan Silva 👋🏽 [Linkedin](https://www.linkedin.com/in/jonathsilva)
 
 [nodejs]: https://nodejs.org/
 [express]: https://expressjs.com/
 [uuidv4]: https://www.npmjs.com/package/uuidv4
 [nodemon]: https://www.npmjs.com/package/nodemon
 [firebase]: https://firebase.google.com/
+[components]: https://styled-components.com/
 
 [scss]:[https://sass-lang.com/]
 [license]: https://opensource.org/licenses/MIT
